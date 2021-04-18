@@ -1,0 +1,567 @@
+{
+    "net": {
+        "port": 8080,
+        "max_connections": 10
+    },
+    "engine": {
+        "fps": 30
+    },
+    "game_objects": {
+        "players": {
+            "width": 100,
+            "height": 100,
+            "max_health": 200,
+            "max_armor": 200,
+            "speed": 10
+        },
+        "scene": {
+            "width_count_cell": 2000,
+            "height_count_cell": 2000,
+            "size_cell": 100,
+            "players_dist_resp": 500,
+            "object_limit": [
+                "kind": "block",
+                "count": 100,
+                "resp_delay": 10,
+            ]
+        },
+        "gun_parts": [
+            {
+                "kind": "blaster",
+                "width": 40,
+                "height": 40,
+                "chance": 70
+            },
+            {
+                "kind": "plasmatron",
+                "width": 40,
+                "height": 40,
+                "chance": 40
+            },
+            {
+                "kind": "rocket_gun",
+                "width": 40,
+                "height": 40,
+                "chance": 40
+            },
+            {
+                "kind": "assault_rifle",
+                "width": 40,
+                "height": 40,
+                "chance": 55
+            },
+            {
+                "kind": "bomb",
+                "width": 40,
+                "height": 40,
+                "chance": 50
+            },
+            {
+                "kind": "ray_gun",
+                "width": 40,
+                "height": 40,
+                "chance": 10
+            },
+            {
+                "kind": "disker",
+                "width": 40,
+                "height": 40,
+                "chance": 25
+            }
+        ],
+        "gun_modules": [
+            {
+                "kind": "gamma_emitter",
+                "width": 40,
+                "height": 40,
+                "chance": 50
+            },
+            {
+                "kind": "zeta_wave_barrel",
+                "width": 40,
+                "height": 40,
+                "chance": 10
+            },
+            {
+                "kind": "phaser",
+                "width": 40,
+                "height": 40,
+                "chance": 20
+            },
+            {
+                "kind": "disc_hardener",
+                "width": 40,
+                "height": 40,
+                "chance": 35
+            },
+            {
+                "kind": "improved_cartridge",
+                "width": 40,
+                "height": 40,
+                "chance": 10
+            },
+            {
+                "kind": "collimator_sight",
+                "width": 40,
+                "height": 40,
+                "chance": 10
+            },
+            {
+                "kind": "long_barrel",
+                "width": 40,
+                "height": 40,
+                "chance": 35
+            },
+            {
+                "kind": "butt",
+                "width": 40,
+                "height": 40,
+                "chance": 50
+            },
+            {
+                "kind": "homing_module",
+                "width": 40,
+                "height": 40,
+                "chance": 10
+            },
+            {
+                "kind": "rocket_compartment",
+                "width": 40,
+                "height": 40,
+                "chance": 20
+            },
+            {
+                "kind": "gamma_diffuser",
+                "width": 40,
+                "height": 40,
+                "chance": 35
+            },
+            {
+                "kind": "photon_activator",
+                "width": 40,
+                "height": 40,
+                "chance": 10
+            },
+            {
+                "kind": "holographic_sight",
+                "width": 40,
+                "height": 40,
+                "chance": 10
+            },
+            {
+                "kind": "beta_wave_modulator",
+                "width": 40,
+                "height": 40,
+                "chance": 35
+            },
+            {
+                "kind": "forced_capacitor",
+                "width": 40,
+                "height": 40,
+                "chance": 35
+            }
+        ],
+        "loots": [
+            {
+                "kind": "blaster",
+                "width": 40,
+                "height": 40,
+                "chance": 50
+            },
+            {
+                "kind": "plasmatron",
+                "width": 40,
+                "height": 40,
+                "chance": 10
+            },
+            {
+                "kind": "rocket_gun",
+                "width": 40,
+                "height": 40,
+                "chance": 20
+            },
+            {
+                "kind": "assault_rifle",
+                "width": 40,
+                "height": 40,
+                "chance": 35
+            },
+            {
+                "kind": "bomb",
+                "width": 40,
+                "height": 40,
+                "chance": 10
+            },
+            {
+                "kind": "ray_gun",
+                "width": 40,
+                "height": 40,
+                "chance": 10
+            },
+            {
+                "kind": "disker",
+                "width": 40,
+                "height": 40,
+                "chance": 35
+            },
+            {
+                "kind": "first_aid_kit",
+                "width": 40,
+                "height": 40,
+                "chance": 10
+            },
+            {
+                "kind": "armor",
+                "width": 40,
+                "height": 40,
+                "chance": 35
+            }
+        ],
+        "runes": [
+            {
+                "width": "30",
+                "height": "30",
+                "effect": {
+                    "kind": "haste",
+                    "speed": 10,
+                    "rate": 0,
+                    "chance": 100,
+                    "duration": 10
+                }
+            },
+            {
+                "width": "30",
+                "height": "30",
+                "effect": {
+                    "kind": "invisibility",
+                    "speed": 0,
+                    "rate": 0,
+                    "chance": 100,
+                    "duration": 15
+                }
+            }
+        ],
+        "gun_cases": [
+            {
+                "kind": "gold",
+                "width": 50,
+                "height": 50,
+                "health": 1000,
+                "gun_part_list": ["ray_gun", "disker"],
+                "chance": 15
+            },
+            {
+                "kind": "silver",
+                "width": 50,
+                "height": 50,
+                "health": 500,
+                "gun_part_list": ["rocket_gun", "plasmatron", "assault_rifle"],
+                "chance": 35
+            },
+            {
+                "kind": "bronze",
+                "width": 50,
+                "height": 50,
+                "health": 250,
+                "gun_part_list": ["blaster"],
+                "chance": 65
+            }
+        ],
+        "gun_chests": [
+            {
+                "kind": "gold",
+                "width": 50,
+                "height": 50,
+                "health": 1000,
+                "gun_module_list": [
+                    "gamma_emitter",
+                    "zeta_wave_barrel",
+                    "phaser",
+                    "disc_hardener",
+                    "improved_cartridge"
+                ],
+                "chance": 15
+            },
+            {
+                "kind": "silver",
+                "width": 50,
+                "height": 50,
+                "health": 500,
+                "gun_module_list": [
+                    "collimator_sight",
+                    "long_barrel",
+                    "butt",
+                    "homing_module",
+                    "rocket_compartment",
+                    "gamma_diffuser",
+                    "photon_activator"
+                ],
+                "chance": 35
+            },
+            {
+                "kind": "bronze",
+                "width": 50,
+                "height": 50,
+                "health": 250,
+                "gun_module_list": [
+                    "holographic_sight",
+                    "beta_wave_modulator",
+                    "forced_capacitor"
+                ],
+                "chance": 65
+            }
+        ],
+        "ammo_cases": [
+            {
+                "kind": "gold",
+                "width": 50,
+                "height": 50,
+                "health": 1000,
+                "loot_list": ["ray_gun", "disker"],
+                "chance": 15
+            },
+            {
+                "kind": "silver",
+                "width": 50,
+                "height": 50,
+                "health": 500,
+                "loot_list": ["rocket_gun", "plasmatron", "assault_rifle"],
+                "chance": 35
+            },
+            {
+                "kind": "bronze",
+                "width": 50,
+                "height": 50,
+                "health": 250,
+                "loot_list": ["blaster", "bomb", "first_aid_kit", "armor"],
+                "chance": 65
+            }
+        ],
+        "blocks": [
+            {
+                "kind": "gold",
+                "width": 50,
+                "height": 50,
+                "health": 250,
+                "content_list": ["gold"],
+                "chance": 30
+            },
+            {
+                "kind": "silver",
+                "width": 50,
+                "height": 50,
+                "health": 250,
+                "content_list": ["silver"],
+                "chance": 40
+            },
+            {
+                "kind": "bronze",
+                "width": 50,
+                "height": 50,
+                "health": 250,
+                "content_list": ["bronze"],
+                "chance": 65
+            }
+        ],
+        "weapons": [
+            {
+                "kind": "blaster",
+                "rate_of_fire": 10,
+                "bullet_spread": 80,
+                "max_parts": 3,
+                "reload_time": 200,
+                "cartridge_capacity": 25,
+                "cartridge_stores": 4,
+                "is_default": false,
+                "modules": [
+                    {
+                        "kind": "holographic_sight",
+                        "bullet_speed": 0,
+                        "bullet_width": 0,
+                        "bullet_height": 0,
+                        "bullet_life_time": 0,
+                        "bullet_damage": 0,
+                        "reload_time": 0,
+                        "cartridge_capacity": 0,
+                        "cartridge_stores": 0,
+                        "rate_of_fire": 10,
+                        "bullet_spread": -40,
+                        "is_installed": false
+                    },
+                    {
+                        "kind": "beta_wave_modulator",
+                        "bullet_speed": 0,
+                        "bullet_width": 0,
+                        "bullet_height": 0,
+                        "bullet_life_time": 100,
+                        "bullet_damage": 8,
+                        "reload_time": 0,
+                        "cartridge_capacity": 0,
+                        "cartridge_stores": 0,
+                        "rate_of_fire": 0,
+                        "bullet_spread": 20,
+                        "is_installed": false
+                    },
+                    {
+                        "kind": "forced_capacitor",
+                        "bullet_speed": 0,
+                        "bullet_width": 0,
+                        "bullet_height": 0,
+                        "bullet_life_time": -40,
+                        "bullet_damage": 0,
+                        "reload_time": 0,
+                        "cartridge_capacity": 0,
+                        "cartridge_stores": 0,
+                        "rate_of_fire": 7,
+                        "bullet_spread": 0,
+                        "is_installed": false
+                    }
+                ],
+                "bullet_speed": 60,
+                "bullet_width": 20,
+                "bullet_height": 20,
+                "bullet_life_time": 150,
+                "bullet_damage": 15,
+                "bullet_radius_of_destruction": 20,
+                "bullet_trigger_radius": 20,
+                "bullet_trigger_delay": 0,
+                "bullet_ricochet": 0,
+                "bullet_effects": []
+            },
+            {
+                "kind": "plasmatron",
+                "rate_of_fire": 140,
+                "bullet_spread": 30,
+                "max_parts": 3,
+                "reload_time": 4000,
+                "cartridge_capacity": 10,
+                "cartridge_stores": 3,
+                "is_default": false,
+                "modules": [],
+                "bullet_speed": 70,
+                "bullet_width": 30,
+                "bullet_height": 30,
+                "bullet_life_time": 4,
+                "bullet_damage": 70,
+                "bullet_radius_of_destruction": 30,
+                "bullet_trigger_radius": 30,
+                "bullet_trigger_delay": 0,
+                "bullet_ricochet": 0,
+                "bullet_effects": [
+                    {
+                        "kind": "criple",
+                        "speed": -5,
+                        "rate": 0,
+                        "chance": 13,
+                        "duration": 3
+                    }
+                ]
+            },
+            {
+                "kind": "rocket_gun",
+                "rate_of_fire": 0,
+                "bullet_spread": 20,
+                "max_parts": 4,
+                "reload_time": 150,
+                "cartridge_capacity": 1,
+                "cartridge_stores": 4,
+                "is_default": false,
+                "modules": [],
+                "bullet_speed": 50,
+                "bullet_width": 25,
+                "bullet_height": 25,
+                "bullet_life_time": 500,
+                "bullet_damage": 67,
+                "bullet_radius_of_destruction": 100,
+                "bullet_trigger_radius": 25,
+                "bullet_trigger_delay": 0,
+                "bullet_ricochet": 0,
+                "bullet_effects": []
+            },
+            {
+                "kind": "assault_rifle",
+                "rate_of_fire": 5,
+                "bullet_spread": 60,
+                "max_parts": 2,
+                "reload_time": 140,
+                "cartridge_capacity": 27,
+                "cartridge_stores": 5,
+                "is_default": false,
+                "modules": [],
+                "bullet_speed": 120,
+                "bullet_width": 10,
+                "bullet_height": 10,
+                "bullet_life_time": 100,
+                "bullet_damage": 9,
+                "bullet_radius_of_destruction": 10,
+                "bullet_trigger_radius": 10,
+                "bullet_trigger_delay": 0,
+                "bullet_ricochet": 0,
+                "bullet_effects": []
+            },
+            {
+                "kind": "ray_gun",
+                "rate_of_fire": 1,
+                "bullet_spread": 0,
+                "max_parts": 5,
+                "reload_time": 400,
+                "cartridge_capacity": 500,
+                "cartridge_stores": 3,
+                "is_default": false,
+                "modules": [],
+                "bullet_speed": 1000,
+                "bullet_width": 2,
+                "bullet_height": 2,
+                "bullet_life_time": 1000,
+                "bullet_damage": 2,
+                "bullet_radius_of_destruction": 2,
+                "bullet_trigger_radius": 2,
+                "bullet_trigger_delay": 0,
+                "bullet_ricochet": 2,
+                "bullet_effects": []
+            },
+            {
+                "kind": "disker",
+                "rate_of_fire": 50,
+                "bullet_spread": 20,
+                "max_parts": 4,
+                "reload_time": 120,
+                "cartridge_capacity": 6,
+                "cartridge_stores": 3,
+                "is_default": false,
+                "modules": [],
+                "bullet_speed": 35,
+                "bullet_width": 30,
+                "bullet_height": 30,
+                "bullet_life_time": 500,
+                "bullet_damage": 35,
+                "bullet_radius_of_destruction": 30,
+                "bullet_trigger_radius": 30,
+                "bullet_trigger_delay": 0,
+                "bullet_ricochet": 5,
+                "bullet_effects": []
+            },
+            {
+                "kind": "bomb",
+                "rate_of_fire": 0,
+                "bullet_spread": 0,
+                "max_parts": 1,
+                "reload_time": 500,
+                "cartridge_capacity": 1,
+                "cartridge_stores": 3,
+                "is_default": false,
+                "modules": [],
+                "bullet_speed": 0,
+                "bullet_width": 30,
+                "bullet_height": 30,
+                "bullet_life_time": 999999,
+                "bullet_damage": 180,
+                "bullet_radius_of_destruction": 200,
+                "bullet_trigger_radius": 250,
+                "bullet_trigger_delay": 10,
+                "bullet_ricochet": 0,
+                "bullet_effects": []
+            }
+        ]
+    }
+}

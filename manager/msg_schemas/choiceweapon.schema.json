@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "required": [
+        "method",
+        "nickname",
+        "slot"
+    ],
+    "properties": {
+        "method": {
+            "$id": "#/properties/method",
+            "type": "string"
+        },
+        "nickname": {
+            "$id": "#/properties/nickname",
+            "type": "string"
+        },
+        "slot": {
+            "$id": "#/properties/slot",
+            "type": "string"
+        }
+    },
+    "additionalProperties": true
+}

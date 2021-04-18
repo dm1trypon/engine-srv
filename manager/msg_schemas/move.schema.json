@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "required": [
+        "method",
+        "nickname",
+        "directions"
+    ],
+    "properties": {
+        "method": {
+            "$id": "#/properties/method",
+            "type": "string"
+        },
+        "nickname": {
+            "$id": "#/properties/nickname",
+            "type": "string"
+        },
+        "directions": {
+            "$id": "#/properties/directions",
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/directions/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/directions/items/anyOf/0",
+                        "type": "string"
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": true
+}

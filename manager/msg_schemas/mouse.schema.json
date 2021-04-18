@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "required": [
+        "method",
+        "nickname",
+        "is_pressed",
+        "position"
+    ],
+    "properties": {
+        "method": {
+            "$id": "#/properties/method",
+            "type": "string"
+        },
+        "nickname": {
+            "$id": "#/properties/nickname",
+            "type": "string"
+        },
+        "is_pressed": {
+            "$id": "#/properties/is_pressed",
+            "type": "boolean"
+        },
+        "position": {
+            "$id": "#/properties/position",
+            "type": "object",
+            "required": [
+                "x",
+                "y"
+            ],
+            "properties": {
+                "x": {
+                    "$id": "#/properties/position/properties/x",
+                    "type": "integer"
+                },
+                "y": {
+                    "$id": "#/properties/position/properties/y",
+                    "type": "integer"
+                }
+            },
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}

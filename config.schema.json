@@ -1,0 +1,727 @@
+{
+    "type": "object",
+    "required": [
+        "net",
+        "engine",
+        "game_objects"
+    ],
+    "properties": {
+        "net": {
+            "$id": "#/properties/net",
+            "type": "object",
+            "required": [
+                "port",
+                "max_connections"
+            ],
+            "properties": {
+                "port": {
+                    "$id": "#/properties/net/properties/port",
+                    "type": "integer"
+                },
+                "max_connections": {
+                    "$id": "#/properties/net/properties/max_connections",
+                    "type": "integer"
+                }
+            },
+            "additionalProperties": true
+        },
+        "engine": {
+            "$id": "#/properties/engine",
+            "type": "object",
+            "required": [
+                "fps"
+            ],
+            "properties": {
+                "fps": {
+                    "$id": "#/properties/engine/properties/fps",
+                    "type": "integer"
+                }
+            },
+            "additionalProperties": true
+        },
+        "game_objects": {
+            "$id": "#/properties/game_objects",
+            "type": "object",
+            "required": [
+                "players",
+                "scene",
+                "gun_parts",
+                "gun_modules",
+                "loots",
+                "runes",
+                "gun_cases",
+                "gun_chests",
+                "ammo_cases",
+                "blocks",
+                "weapons"
+            ],
+            "properties": {
+                "players": {
+                    "$id": "#/properties/game_objects/properties/players",
+                    "type": "object",
+                    "required": [
+                        "width",
+                        "height",
+                        "max_health",
+                        "max_armor",
+                        "speed"
+                    ],
+                    "properties": {
+                        "width": {
+                            "$id": "#/properties/game_objects/properties/players/properties/width",
+                            "type": "integer"
+                        },
+                        "height": {
+                            "$id": "#/properties/game_objects/properties/players/properties/height",
+                            "type": "integer"
+                        },
+                        "max_health": {
+                            "$id": "#/properties/game_objects/properties/players/properties/max_health",
+                            "type": "integer"
+                        },
+                        "max_armor": {
+                            "$id": "#/properties/game_objects/properties/players/properties/max_armor",
+                            "type": "integer"
+                        },
+                        "speed": {
+                            "$id": "#/properties/game_objects/properties/players/properties/speed",
+                            "type": "integer"
+                        }
+                    },
+                    "additionalProperties": true
+                },
+                "scene": {
+                    "$id": "#/properties/game_objects/properties/scene",
+                    "type": "object",
+                    "required": [
+                        "width",
+                        "height"
+                    ],
+                    "properties": {
+                        "width": {
+                            "$id": "#/properties/game_objects/properties/scene/properties/width",
+                            "type": "integer"
+                        },
+                        "height": {
+                            "$id": "#/properties/game_objects/properties/scene/properties/height",
+                            "type": "integer"
+                        }
+                    },
+                    "additionalProperties": true
+                },
+                "gun_parts": {
+                    "$id": "#/properties/game_objects/properties/gun_parts",
+                    "type": "array",
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/game_objects/properties/gun_parts/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/game_objects/properties/gun_parts/items/anyOf/0",
+                                "type": "object",
+                                "required": [
+                                    "kind",
+                                    "width",
+                                    "height",
+                                    "chance"
+                                ],
+                                "properties": {
+                                    "kind": {
+                                        "$id": "#/properties/game_objects/properties/gun_parts/items/anyOf/0/properties/kind",
+                                        "type": "string"
+                                    },
+                                    "width": {
+                                        "$id": "#/properties/game_objects/properties/gun_parts/items/anyOf/0/properties/width",
+                                        "type": "integer"
+                                    },
+                                    "height": {
+                                        "$id": "#/properties/game_objects/properties/gun_parts/items/anyOf/0/properties/height",
+                                        "type": "integer"
+                                    },
+                                    "chance": {
+                                        "$id": "#/properties/game_objects/properties/gun_parts/items/anyOf/0/properties/chance",
+                                        "type": "integer"
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        ]
+                    }
+                },
+                "gun_modules": {
+                    "$id": "#/properties/game_objects/properties/gun_modules",
+                    "type": "array",
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/game_objects/properties/gun_modules/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/game_objects/properties/gun_modules/items/anyOf/0",
+                                "type": "object",
+                                "required": [
+                                    "kind",
+                                    "width",
+                                    "height",
+                                    "chance"
+                                ],
+                                "properties": {
+                                    "kind": {
+                                        "$id": "#/properties/game_objects/properties/gun_modules/items/anyOf/0/properties/kind",
+                                        "type": "string"
+                                    },
+                                    "width": {
+                                        "$id": "#/properties/game_objects/properties/gun_modules/items/anyOf/0/properties/width",
+                                        "type": "integer"
+                                    },
+                                    "height": {
+                                        "$id": "#/properties/game_objects/properties/gun_modules/items/anyOf/0/properties/height",
+                                        "type": "integer"
+                                    },
+                                    "chance": {
+                                        "$id": "#/properties/game_objects/properties/gun_modules/items/anyOf/0/properties/chance",
+                                        "type": "integer"
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        ]
+                    }
+                },
+                "loots": {
+                    "$id": "#/properties/game_objects/properties/loots",
+                    "type": "array",
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/game_objects/properties/loots/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/game_objects/properties/loots/items/anyOf/0",
+                                "type": "object",
+                                "required": [
+                                    "kind",
+                                    "width",
+                                    "height",
+                                    "chance"
+                                ],
+                                "properties": {
+                                    "kind": {
+                                        "$id": "#/properties/game_objects/properties/loots/items/anyOf/0/properties/kind",
+                                        "type": "string"
+                                    },
+                                    "width": {
+                                        "$id": "#/properties/game_objects/properties/loots/items/anyOf/0/properties/width",
+                                        "type": "integer"
+                                    },
+                                    "height": {
+                                        "$id": "#/properties/game_objects/properties/loots/items/anyOf/0/properties/height",
+                                        "type": "integer"
+                                    },
+                                    "chance": {
+                                        "$id": "#/properties/game_objects/properties/loots/items/anyOf/0/properties/chance",
+                                        "type": "integer"
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        ]
+                    }
+                },
+                "runes": {
+                    "$id": "#/properties/game_objects/properties/runes",
+                    "type": "array",
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/game_objects/properties/runes/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/game_objects/properties/runes/items/anyOf/0",
+                                "type": "object",
+                                "required": [
+                                    "width",
+                                    "height",
+                                    "effect"
+                                ],
+                                "properties": {
+                                    "width": {
+                                        "$id": "#/properties/game_objects/properties/runes/items/anyOf/0/properties/width",
+                                        "type": "string"
+                                    },
+                                    "height": {
+                                        "$id": "#/properties/game_objects/properties/runes/items/anyOf/0/properties/height",
+                                        "type": "string"
+                                    },
+                                    "effect": {
+                                        "$id": "#/properties/game_objects/properties/runes/items/anyOf/0/properties/effect",
+                                        "type": "object",
+                                        "required": [
+                                            "kind",
+                                            "speed",
+                                            "rate",
+                                            "chance",
+                                            "duration"
+                                        ],
+                                        "properties": {
+                                            "kind": {
+                                                "$id": "#/properties/game_objects/properties/runes/items/anyOf/0/properties/effect/properties/kind",
+                                                "type": "string"
+                                            },
+                                            "speed": {
+                                                "$id": "#/properties/game_objects/properties/runes/items/anyOf/0/properties/effect/properties/speed",
+                                                "type": "integer"
+                                            },
+                                            "rate": {
+                                                "$id": "#/properties/game_objects/properties/runes/items/anyOf/0/properties/effect/properties/rate",
+                                                "type": "integer"
+                                            },
+                                            "chance": {
+                                                "$id": "#/properties/game_objects/properties/runes/items/anyOf/0/properties/effect/properties/chance",
+                                                "type": "integer"
+                                            },
+                                            "duration": {
+                                                "$id": "#/properties/game_objects/properties/runes/items/anyOf/0/properties/effect/properties/duration",
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "additionalProperties": true
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        ]
+                    }
+                },
+                "gun_cases": {
+                    "$id": "#/properties/game_objects/properties/gun_cases",
+                    "type": "array",
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/game_objects/properties/gun_cases/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/game_objects/properties/gun_cases/items/anyOf/0",
+                                "type": "object",
+                                "required": [
+                                    "kind",
+                                    "width",
+                                    "height",
+                                    "health",
+                                    "gun_part_list",
+                                    "chance"
+                                ],
+                                "properties": {
+                                    "kind": {
+                                        "$id": "#/properties/game_objects/properties/gun_cases/items/anyOf/0/properties/kind",
+                                        "type": "string"
+                                    },
+                                    "width": {
+                                        "$id": "#/properties/game_objects/properties/gun_cases/items/anyOf/0/properties/width",
+                                        "type": "integer"
+                                    },
+                                    "height": {
+                                        "$id": "#/properties/game_objects/properties/gun_cases/items/anyOf/0/properties/height",
+                                        "type": "integer"
+                                    },
+                                    "health": {
+                                        "$id": "#/properties/game_objects/properties/gun_cases/items/anyOf/0/properties/health",
+                                        "type": "integer"
+                                    },
+                                    "gun_part_list": {
+                                        "$id": "#/properties/game_objects/properties/gun_cases/items/anyOf/0/properties/gun_part_list",
+                                        "type": "array",
+                                        "additionalItems": true,
+                                        "items": {
+                                            "$id": "#/properties/game_objects/properties/gun_cases/items/anyOf/0/properties/gun_part_list/items",
+                                            "anyOf": [
+                                                {
+                                                    "$id": "#/properties/game_objects/properties/gun_cases/items/anyOf/0/properties/gun_part_list/items/anyOf/0",
+                                                    "type": "string"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "chance": {
+                                        "$id": "#/properties/game_objects/properties/gun_cases/items/anyOf/0/properties/chance",
+                                        "type": "integer"
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        ]
+                    }
+                },
+                "gun_chests": {
+                    "$id": "#/properties/game_objects/properties/gun_chests",
+                    "type": "array",
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/game_objects/properties/gun_chests/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/game_objects/properties/gun_chests/items/anyOf/0",
+                                "type": "object",
+                                "required": [
+                                    "kind",
+                                    "width",
+                                    "height",
+                                    "health",
+                                    "gun_module_list",
+                                    "chance"
+                                ],
+                                "properties": {
+                                    "kind": {
+                                        "$id": "#/properties/game_objects/properties/gun_chests/items/anyOf/0/properties/kind",
+                                        "type": "string"
+                                    },
+                                    "width": {
+                                        "$id": "#/properties/game_objects/properties/gun_chests/items/anyOf/0/properties/width",
+                                        "type": "integer"
+                                    },
+                                    "height": {
+                                        "$id": "#/properties/game_objects/properties/gun_chests/items/anyOf/0/properties/height",
+                                        "type": "integer"
+                                    },
+                                    "health": {
+                                        "$id": "#/properties/game_objects/properties/gun_chests/items/anyOf/0/properties/health",
+                                        "type": "integer"
+                                    },
+                                    "gun_module_list": {
+                                        "$id": "#/properties/game_objects/properties/gun_chests/items/anyOf/0/properties/gun_module_list",
+                                        "type": "array",
+                                        "additionalItems": true,
+                                        "items": {
+                                            "$id": "#/properties/game_objects/properties/gun_chests/items/anyOf/0/properties/gun_module_list/items",
+                                            "anyOf": [
+                                                {
+                                                    "$id": "#/properties/game_objects/properties/gun_chests/items/anyOf/0/properties/gun_module_list/items/anyOf/0",
+                                                    "type": "string"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "chance": {
+                                        "$id": "#/properties/game_objects/properties/gun_chests/items/anyOf/0/properties/chance",
+                                        "type": "integer"
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        ]
+                    }
+                },
+                "ammo_cases": {
+                    "$id": "#/properties/game_objects/properties/ammo_cases",
+                    "type": "array",
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/game_objects/properties/ammo_cases/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/game_objects/properties/ammo_cases/items/anyOf/0",
+                                "type": "object",
+                                "required": [
+                                    "kind",
+                                    "width",
+                                    "height",
+                                    "health",
+                                    "loot_list",
+                                    "chance"
+                                ],
+                                "properties": {
+                                    "kind": {
+                                        "$id": "#/properties/game_objects/properties/ammo_cases/items/anyOf/0/properties/kind",
+                                        "type": "string"
+                                    },
+                                    "width": {
+                                        "$id": "#/properties/game_objects/properties/ammo_cases/items/anyOf/0/properties/width",
+                                        "type": "integer"
+                                    },
+                                    "height": {
+                                        "$id": "#/properties/game_objects/properties/ammo_cases/items/anyOf/0/properties/height",
+                                        "type": "integer"
+                                    },
+                                    "health": {
+                                        "$id": "#/properties/game_objects/properties/ammo_cases/items/anyOf/0/properties/health",
+                                        "type": "integer"
+                                    },
+                                    "loot_list": {
+                                        "$id": "#/properties/game_objects/properties/ammo_cases/items/anyOf/0/properties/loot_list",
+                                        "type": "array",
+                                        "additionalItems": true,
+                                        "items": {
+                                            "$id": "#/properties/game_objects/properties/ammo_cases/items/anyOf/0/properties/loot_list/items",
+                                            "anyOf": [
+                                                {
+                                                    "$id": "#/properties/game_objects/properties/ammo_cases/items/anyOf/0/properties/loot_list/items/anyOf/0",
+                                                    "type": "string"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "chance": {
+                                        "$id": "#/properties/game_objects/properties/ammo_cases/items/anyOf/0/properties/chance",
+                                        "type": "integer"
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        ]
+                    }
+                },
+                "blocks": {
+                    "$id": "#/properties/game_objects/properties/blocks",
+                    "type": "array",
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/game_objects/properties/blocks/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/game_objects/properties/blocks/items/anyOf/0",
+                                "type": "object",
+                                "required": [
+                                    "kind",
+                                    "width",
+                                    "height",
+                                    "health",
+                                    "content_list",
+                                    "chance"
+                                ],
+                                "properties": {
+                                    "kind": {
+                                        "$id": "#/properties/game_objects/properties/blocks/items/anyOf/0/properties/kind",
+                                        "type": "string"
+                                    },
+                                    "width": {
+                                        "$id": "#/properties/game_objects/properties/blocks/items/anyOf/0/properties/width",
+                                        "type": "integer"
+                                    },
+                                    "height": {
+                                        "$id": "#/properties/game_objects/properties/blocks/items/anyOf/0/properties/height",
+                                        "type": "integer"
+                                    },
+                                    "health": {
+                                        "$id": "#/properties/game_objects/properties/blocks/items/anyOf/0/properties/health",
+                                        "type": "integer"
+                                    },
+                                    "content_list": {
+                                        "$id": "#/properties/game_objects/properties/blocks/items/anyOf/0/properties/content_list",
+                                        "type": "array",
+                                        "additionalItems": true,
+                                        "items": {
+                                            "$id": "#/properties/game_objects/properties/blocks/items/anyOf/0/properties/content_list/items",
+                                            "anyOf": [
+                                                {
+                                                    "$id": "#/properties/game_objects/properties/blocks/items/anyOf/0/properties/content_list/items/anyOf/0",
+                                                    "type": "string"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "chance": {
+                                        "$id": "#/properties/game_objects/properties/blocks/items/anyOf/0/properties/chance",
+                                        "type": "integer"
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        ]
+                    }
+                },
+                "weapons": {
+                    "$id": "#/properties/game_objects/properties/weapons",
+                    "type": "array",
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/game_objects/properties/weapons/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0",
+                                "type": "object",
+                                "required": [
+                                    "kind",
+                                    "rate_of_fire",
+                                    "bullet_spread",
+                                    "max_parts",
+                                    "reload_time",
+                                    "cartridge_capacity",
+                                    "cartridge_stores",
+                                    "is_default",
+                                    "modules",
+                                    "bullet_speed",
+                                    "bullet_width",
+                                    "bullet_height",
+                                    "bullet_life_time",
+                                    "bullet_damage",
+                                    "bullet_radius_of_destruction",
+                                    "bullet_trigger_radius",
+                                    "bullet_trigger_delay",
+                                    "bullet_ricochet",
+                                    "bullet_effects"
+                                ],
+                                "properties": {
+                                    "kind": {
+                                        "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/kind",
+                                        "type": "string"
+                                    },
+                                    "rate_of_fire": {
+                                        "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/rate_of_fire",
+                                        "type": "integer"
+                                    },
+                                    "bullet_spread": {
+                                        "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/bullet_spread",
+                                        "type": "integer"
+                                    },
+                                    "max_parts": {
+                                        "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/max_parts",
+                                        "type": "integer"
+                                    },
+                                    "reload_time": {
+                                        "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/reload_time",
+                                        "type": "integer"
+                                    },
+                                    "cartridge_capacity": {
+                                        "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/cartridge_capacity",
+                                        "type": "integer"
+                                    },
+                                    "cartridge_stores": {
+                                        "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/cartridge_stores",
+                                        "type": "integer"
+                                    },
+                                    "is_default": {
+                                        "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/is_default",
+                                        "type": "boolean"
+                                    },
+                                    "modules": {
+                                        "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/modules",
+                                        "type": "array",
+                                        "additionalItems": true,
+                                        "items": {
+                                            "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/modules/items",
+                                            "anyOf": [
+                                                {
+                                                    "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/modules/items/anyOf/0",
+                                                    "type": "object",
+                                                    "required": [
+                                                        "kind",
+                                                        "bullet_speed",
+                                                        "bullet_width",
+                                                        "bullet_height",
+                                                        "bullet_life_time",
+                                                        "bullet_damage",
+                                                        "reload_time",
+                                                        "cartridge_capacity",
+                                                        "cartridge_stores",
+                                                        "rate_of_fire",
+                                                        "bullet_spread",
+                                                        "is_installed"
+                                                    ],
+                                                    "properties": {
+                                                        "kind": {
+                                                            "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/modules/items/anyOf/0/properties/kind",
+                                                            "type": "string"
+                                                        },
+                                                        "bullet_speed": {
+                                                            "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/modules/items/anyOf/0/properties/bullet_speed",
+                                                            "type": "integer"
+                                                        },
+                                                        "bullet_width": {
+                                                            "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/modules/items/anyOf/0/properties/bullet_width",
+                                                            "type": "integer"
+                                                        },
+                                                        "bullet_height": {
+                                                            "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/modules/items/anyOf/0/properties/bullet_height",
+                                                            "type": "integer"
+                                                        },
+                                                        "bullet_life_time": {
+                                                            "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/modules/items/anyOf/0/properties/bullet_life_time",
+                                                            "type": "integer"
+                                                        },
+                                                        "bullet_damage": {
+                                                            "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/modules/items/anyOf/0/properties/bullet_damage",
+                                                            "type": "integer"
+                                                        },
+                                                        "reload_time": {
+                                                            "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/modules/items/anyOf/0/properties/reload_time",
+                                                            "type": "integer"
+                                                        },
+                                                        "cartridge_capacity": {
+                                                            "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/modules/items/anyOf/0/properties/cartridge_capacity",
+                                                            "type": "integer"
+                                                        },
+                                                        "cartridge_stores": {
+                                                            "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/modules/items/anyOf/0/properties/cartridge_stores",
+                                                            "type": "integer"
+                                                        },
+                                                        "rate_of_fire": {
+                                                            "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/modules/items/anyOf/0/properties/rate_of_fire",
+                                                            "type": "integer"
+                                                        },
+                                                        "bullet_spread": {
+                                                            "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/modules/items/anyOf/0/properties/bullet_spread",
+                                                            "type": "integer"
+                                                        },
+                                                        "is_installed": {
+                                                            "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/modules/items/anyOf/0/properties/is_installed",
+                                                            "type": "boolean"
+                                                        }
+                                                    },
+                                                    "additionalProperties": true
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "bullet_speed": {
+                                        "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/bullet_speed",
+                                        "type": "integer"
+                                    },
+                                    "bullet_width": {
+                                        "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/bullet_width",
+                                        "type": "integer"
+                                    },
+                                    "bullet_height": {
+                                        "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/bullet_height",
+                                        "type": "integer"
+                                    },
+                                    "bullet_life_time": {
+                                        "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/bullet_life_time",
+                                        "type": "integer"
+                                    },
+                                    "bullet_damage": {
+                                        "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/bullet_damage",
+                                        "type": "integer"
+                                    },
+                                    "bullet_radius_of_destruction": {
+                                        "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/bullet_radius_of_destruction",
+                                        "type": "integer"
+                                    },
+                                    "bullet_trigger_radius": {
+                                        "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/bullet_trigger_radius",
+                                        "type": "integer"
+                                    },
+                                    "bullet_trigger_delay": {
+                                        "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/bullet_trigger_delay",
+                                        "type": "integer"
+                                    },
+                                    "bullet_ricochet": {
+                                        "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/bullet_ricochet",
+                                        "type": "integer"
+                                    },
+                                    "bullet_effects": {
+                                        "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/bullet_effects",
+                                        "type": "array",
+                                        "additionalItems": true,
+                                        "items": {
+                                            "$id": "#/properties/game_objects/properties/weapons/items/anyOf/0/properties/bullet_effects/items"
+                                        }
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        ]
+                    }
+                }
+            },
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}
